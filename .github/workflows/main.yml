@@ -1,0 +1,41 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # This workflow now triggers on pushes to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allows writing to the repo (for gh-pages branch)
+      pages: write    # Allows deployment to GitHub Pages
+      id-token: write # Needed for OIDC authentication for some actions
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Fetch theme submodules if you used them
+          fetch-depth: 0    # Fetch all history for proper git ops by Hugo
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest' # Or a specific version like '0.120.0'
+          # extended: true # Uncomment if your theme requires Hugo extended version (e.g., for Sass)
+
+      - name: Build Hugo Site
+        run: hugo --minify
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          # IMPORTANT: Now we are publishing to the 'gh-pages' branch
+          publish_branch: gh-pages
+          # We typically don't use force_orphan when deploying to a separate gh-pages branch
+          # unless you specifically want to wipe its history every time. Leave it commented for now.
+          # force_orphan: true
