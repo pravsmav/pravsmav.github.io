@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science basics and Implementation</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Data Science basics and Implementation</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Jun 2025 12:41:04 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up a Robust Python Environment for ML</title>
+      <link>http://localhost:1313/posts/my-first-data-science-post/</link>
+      <pubDate>Thu, 19 Jun 2025 12:41:04 +0200</pubDate>
+      <guid>http://localhost:1313/posts/my-first-data-science-post/</guid>
+      <description>&lt;h1 id=&#34;why-a-robust-python-environment-is-your-best-friend-in-data-science&#34;&gt;Why a Robust Python Environment is Your Best Friend in Data Science&lt;/h1&gt;&#xA;&lt;p&gt;Starting a journey in data science is exciting, but it quickly becomes messy if your development environment isn&amp;rsquo;t properly managed. Imagine working on multiple projects, each requiring different versions of the same library. One project needs &lt;code&gt;pandas 1.x&lt;/code&gt;, another insists on &lt;code&gt;pandas 2.x&lt;/code&gt;. Without proper isolation, you&amp;rsquo;d quickly find yourself in &amp;ldquo;dependency hell,&amp;rdquo; where installing one library breaks another project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
