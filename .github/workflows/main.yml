@@ -24,7 +24,7 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest' # Or a specific version like '0.120.0'
-          # extended: true # Uncomment if your theme requires Hugo extended version (e.g., for Sass)
+          extended: true # Uncomment if your theme requires Hugo extended version (e.g., for Sass)
 
       - name: Build Hugo Site
         run: hugo --minify
